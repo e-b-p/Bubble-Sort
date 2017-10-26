@@ -1,0 +1,16 @@
+$a = 9,1,2,3,22,1
+$len=$a.Length
+for ($itr=0; $itr -lt ($len - 2 ); $itr++) {
+    for ($idx=0; $idx -lt ($len - $itr -1); $idx++) {
+        if ( $a[$idx] -gt $a[$idx + 1]) {
+            # If the 1st number if bigger than the second swap
+            $temp=$a[$idx]
+            $a[$idx]=$a[$idx +1]
+            $a[$idx +1]=$temp
+        }
+        Write-Output "$a"
+    }
+    Write-Output "=========== Next Iteration =========="
+
+}
+    
